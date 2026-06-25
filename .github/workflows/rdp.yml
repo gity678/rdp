@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
-      - name: Install XFCE & XRDP
+      - name: Install XFCE & XRDP & Firefox
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y xfce4 xfce4-goodies xrdp
+          sudo apt-get install -y xfce4 xfce4-goodies xrdp firefox
           sudo systemctl enable xrdp
           sudo systemctl start xrdp
       - name: Set password for runner user
